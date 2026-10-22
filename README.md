@@ -1,21 +1,10 @@
 # AymenFeki.github.io
 
-Source of my personal portfolio site: a single static `index.html`, served by GitHub Pages.
+Source of my portfolio website, live at **[aymenfeki.de](https://aymenfeki.de)**.
 
-No build step, no frameworks, no external fonts, no cookies or tracking.
+## Updating the site
 
-## Updating
+1. Click **Add file → Upload files** and drag in the changed files (usually `index.html`).
+2. Click **Commit changes**. The site updates within a minute or two.
 
-Edit `index.html`, then:
-
-```bash
-git add index.html
-git commit -m "Update portfolio"
-git push
-```
-
-The live site updates within a minute or two.
-
-## Adding a project
-
-Copy one `<article class="project">` block in `index.html`, then change the headline number, its label, the title, the description, the tools line and the repository link.
+Keep the `CNAME` file, which connects the site to aymenfeki.de.
