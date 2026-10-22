@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aymen Feki</title>
+<meta name="description" content="Aymen Feki, Statistics and Data Science student at LMU Munich. Machine learning, AI and statistics projects in Python and R.">
+<meta name="author" content="Aymen Feki">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aymen Feki">
+<meta property="og:description" content="Statistics and Data Science student at LMU Munich. Machine learning, AI and statistics projects in Python and R.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A6B48'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EAF%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #F5F7F6;
+    --ink: #17231D;
+    --muted: #56645D;
+    --rule: #D3DBD7;
+    --accent: #0A6B48;
+    --accent-soft: #E3EFE9;
+    --serif: "Iowan Old Style", "Charter", "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --figure-col: 10.5rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1613;
+      --ink: #E3EAE6;
+      --muted: #98A69F;
+      --rule: #27322D;
+      --accent: #63C99C;
+      --accent-soft: #17251F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1613;
+    --ink: #E3EAE6;
+    --muted: #98A69F;
+    --rule: #27322D;
+    --accent: #63C99C;
+    --accent-soft: #17251F;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 58rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  a { color: inherit; text-decoration-color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 0.2em; }
+  a:hover { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--bg); padding: 0.5rem 0.75rem; }
+
+  /* Hero */
+  header.hero { padding: 5.5rem 0 3.5rem; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(2.75rem, 7vw, 4.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+  }
+  .hero .lede {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    max-width: 36rem;
+    margin: 0 0 1rem;
+  }
+  .hero .status { color: var(--muted); margin: 0 0 1.75rem; }
+  .links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin: 0; padding: 0; list-style: none; font-weight: 600; }
+
+  /* Sections */
+  section { padding: 2.5rem 0 1rem; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.25rem;
+  }
+
+  /* Projects: the key number leads each entry */
+  .project {
+    display: grid;
+    grid-template-columns: var(--figure-col) 1fr;
+    gap: 0 2.25rem;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .project:last-of-type { border-bottom: 1px solid var(--rule); }
+  .figure {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    font-variant-numeric: lining-nums tabular-nums;
+    white-space: nowrap;
+  }
+  .figure-label {
+    color: var(--muted);
+    font-size: 0.875rem;
+    line-height: 1.45;
+    margin-top: 0.6rem;
+  }
+  .project h3 {
+    font-size: 1.2rem;
+    line-height: 1.35;
+    margin: 0 0 0.5rem;
+  }
+  .project h3 a { text-decoration: none; }
+  .project h3 a:hover { text-decoration: underline; }
+  .project p { margin: 0 0 0.75rem; max-width: 40rem; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 0; }
+  .meta + .meta { margin-top: 0.15rem; }
+
+  /* Smaller entries without a headline number */
+  .more { list-style: none; margin: 0; padding: 0; }
+  .more li { padding: 1rem 0; border-bottom: 1px solid var(--rule); max-width: 46rem; }
+  .more li:first-child { border-top: 1px solid var(--rule); }
+  .more strong { font-weight: 600; }
+
+  /* Education and skills share the project grid */
+  dl.ledger { margin: 0; }
+  .ledger > div {
+    display: grid;
+    grid-template-columns: var(--figure-col) 1fr;
+    gap: 0 2.25rem;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .ledger > div:last-child { border-bottom: 1px solid var(--rule); }
+  .ledger dt { font-weight: 600; }
+  .ledger dd { margin: 0; max-width: 40rem; }
+
+  footer {
+    padding: 3rem 0 4rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 640px) {
+    header.hero { padding: 3.5rem 0 2.5rem; }
+    .hero .lede { font-size: 1.125rem; }
+    .project, .ledger > div { grid-template-columns: 1fr; }
+    .project .figure-wrap { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.9rem; }
+    .figure { font-size: 2.1rem; }
+    .figure-label { margin-top: 0; }
+    .ledger dt { margin-bottom: 0.15rem; }
+  }
+
+  @media print {
+    body { background: #fff; color: #000; }
+    .skip { display: none; }
+    a { text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#projects">Skip to projects</a>
+<div class="page">
+
+  <header class="hero">
+    <h1>Aymen Feki</h1>
+    <p class="lede">Statistics and Data Science student at LMU Munich. I build machine learning and AI projects in Python and R, and I put most of the work into how they are evaluated.</p>
+    <p class="status">Looking for working-student roles and internships in Munich.</p>
+    <ul class="links">
+      <li><a href="https://github.com/AymenFeki">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/aymen-feki-datascience">LinkedIn</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+
+      <article class="project">
+        <div class="figure-wrap">
+          <div class="figure">30/34</div>
+          <div class="figure-label">test questions find a relevant paper in the top 5 (25/34 without reranking)</div>
+        </div>
+        <div>
+          <h3><a href="https://github.com/AymenFeki/paper-tutor">paper-tutor: a study assistant over 7,183 research papers</a></h3>
+          <p>Answers questions only from a curated paper database and cites its sources, or says the database has nothing relevant. Papers come from OpenAlex, pass credibility filters and are stored with embeddings in PostgreSQL. Runs on Azure with a FastAPI backend, a LangGraph tutor, an MCP server and scheduled quiz and refresh jobs.</p>
+          <p class="meta">Python, LangChain, LangGraph, MCP, PostgreSQL with pgvector, FastAPI, Docker, GitHub Actions, Azure</p>
+          <p class="meta"><a href="https://github.com/AymenFeki/paper-tutor">github.com/AymenFeki/paper-tutor</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="figure-wrap">
+          <div class="figure">13.37</div>
+          <div class="figure-label">test RMSE in cycles for the Transformer, against 19.81 for gradient boosting</div>
+        </div>
+        <div>
+          <h3><a href="https://github.com/AymenFeki/turbofan-rul-prediction">Predicting when jet engines will fail</a></h3>
+          <p>Remaining-useful-life prediction on NASA's C-MAPSS turbofan data. Compares gradient boosting with an LSTM, a 1D-CNN and a Transformer on identical data, validates by engine rather than by row so no engine leaks into both sets, and explains predictions with SHAP.</p>
+          <p class="meta">Python, PyTorch, scikit-learn, SHAP, pytest</p>
+          <p class="meta"><a href="https://github.com/AymenFeki/turbofan-rul-prediction">github.com/AymenFeki/turbofan-rul-prediction</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="figure-wrap">
+          <div class="figure">&minus;27%</div>
+          <div class="figure-label">out-of-sample volatility against an equal-weight portfolio (9.34% vs 12.84%)</div>
+        </div>
+        <div>
+          <h3><a href="https://github.com/AymenFeki/Robust-covariance-portfolios">Robust covariance estimation for portfolios</a></h3>
+          <p>Compares the sample covariance with four regularised estimators, including Ledoit&ndash;Wolf shrinkage, random-matrix eigenvalue clipping and a PCA factor model, on 428 S&amp;P&nbsp;500 stocks. Tested in a walk-forward backtest with transaction costs and on a second dataset spanning the 2008 crisis; bootstrap intervals and a deflated Sharpe ratio show which differences hold up.</p>
+          <p class="meta">Python, NumPy, pandas, Matplotlib, pytest</p>
+          <p class="meta"><a href="https://github.com/AymenFeki/Robust-covariance-portfolios">github.com/AymenFeki/Robust-covariance-portfolios</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="figure-wrap">
+          <div class="figure">14%</div>
+          <div class="figure-label">of the Monte Carlo paths reach the same accuracy with a control variate</div>
+        </div>
+        <div>
+          <h3><a href="https://github.com/AymenFeki/options-pricing-basics">Option pricing from scratch</a></h3>
+          <p>Binomial tree, Black&ndash;Scholes and Monte Carlo written in NumPy without any pricing library, and checked against each other and against no-arbitrage identities. Extended to American early exercise, Asian and barrier options, and a delta-hedging simulation with transaction costs.</p>
+          <p class="meta">Python, NumPy, SciPy, Matplotlib, pytest (69 tests)</p>
+          <p class="meta"><a href="https://github.com/AymenFeki/options-pricing-basics">github.com/AymenFeki/options-pricing-basics</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="figure-wrap">
+          <div class="figure">+1.79</div>
+          <div class="figure-label">percentage points of conversion uplift, 95% CI from 1.16 to 2.41</div>
+        </div>
+        <div>
+          <h3><a href="https://github.com/AymenFeki/ab-testing-analysis">A/B test analysis</a></h3>
+          <p>A simulated checkout experiment with 40,000 visitors and a known ground truth, analysed with a two-proportion z-test, Welch's t-test, a chi-square test and a power analysis, all written from first principles on NumPy and SciPy.</p>
+          <p class="meta">Python, NumPy, SciPy, pandas, pytest, GitHub Actions</p>
+          <p class="meta"><a href="https://github.com/AymenFeki/ab-testing-analysis">github.com/AymenFeki/ab-testing-analysis</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="figure-wrap">
+          <div class="figure">0.82</div>
+          <div class="figure-label">R&sup2; of the regression model on 2,311 complete country-years</div>
+        </div>
+        <div>
+          <h3><a href="https://github.com/AymenFeki/life-expectancy-analysis">What predicts life expectancy?</a></h3>
+          <p>WHO and UN panel data on 193 countries from 2000 to 2015, analysed in R four ways: regression with LASSO, a mixed-effects model for the repeated-measures structure, ridge-penalised classification after diagnosing quasi-complete separation, and hypothesis tests that check their own assumptions.</p>
+          <p class="meta">R, tidyverse, lme4, glmnet, R Markdown, testthat</p>
+          <p class="meta"><a href="https://github.com/AymenFeki/life-expectancy-analysis">github.com/AymenFeki/life-expectancy-analysis</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="figure-wrap">
+          <div class="figure">95,416</div>
+          <div class="figure-label">salary records in the dashboard's data model</div>
+        </div>
+        <div>
+          <h3><a href="https://github.com/AymenFeki/pbi-job-market">Data and statistics job market dashboard</a></h3>
+          <p>A Power BI report on pay in data roles from 2022 to 2025. 422 raw job titles are sorted into 10 role categories by a documented rule, the model is a star schema with 7 dimension tables, and every DAX measure was checked against Python before it was written.</p>
+          <p class="meta">Power BI, DAX, Python</p>
+          <p class="meta"><a href="https://github.com/AymenFeki/pbi-job-market">github.com/AymenFeki/pbi-job-market</a></p>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="more-h">
+      <h2 id="more-h">Also on GitHub</h2>
+      <ul class="more">
+        <li><strong><a href="https://github.com/AymenFeki/stats-concepts-lab">Statistics concepts lab</a></strong>: an R Shiny app that simulates the central limit theorem, Type I error and power, and confidence-interval coverage live.</li>
+        <li><strong><a href="https://github.com/AymenFeki/Social-Inequality">Social inequality</a></strong>: LMU team project of four students, where I was responsible for the content, on trends in income and gender inequality and how they relate to democracy, health and safety. R and Quarto.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="about-h">
+      <h2 id="about-h">Education and skills</h2>
+      <dl class="ledger">
+        <div>
+          <dt>Education</dt>
+          <dd>B.Sc. Statistics and Data Science with a minor in Economics, LMU Munich, since 2024</dd>
+        </div>
+        <div>
+          <dt>Programming</dt>
+          <dd>Python (pandas, NumPy, SciPy, scikit-learn, PyTorch), R (tidyverse, lme4, glmnet, Shiny), SQL</dd>
+        </div>
+        <div>
+          <dt>ML and AI</dt>
+          <dd>Gradient boosting, LSTM, CNN and Transformer models, SHAP, retrieval-augmented generation, LangChain, LangGraph, MCP</dd>
+        </div>
+        <div>
+          <dt>Engineering</dt>
+          <dd>Git, GitHub Actions, Docker, FastAPI, PostgreSQL, Azure, pytest</dd>
+        </div>
+        <div>
+          <dt>Analytics</dt>
+          <dd>Power BI (DAX), Excel (pivot tables, XLOOKUP, Power Query)</dd>
+        </div>
+        <div>
+          <dt>Languages</dt>
+          <dd>Arabic and French (native), German and English (fluent)</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> Aymen Feki. Plain HTML, hosted on GitHub Pages, no cookies or tracking.</p>
+  </footer>
+</div>
+<script>
+  try { document.getElementById("year").textContent = new Date().getFullYear(); } catch (e) {}
+</script>
+</body>
+</html>
