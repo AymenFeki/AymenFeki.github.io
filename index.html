@@ -228,6 +228,7 @@
   .ledger > div:last-child { border-bottom: 1px solid var(--rule); }
   .ledger dt { font-weight: 600; }
   .ledger dd { margin: 0; max-width: 40rem; }
+  .sub-muted { display: block; color: var(--muted); font-size: 0.9rem; }
 
   footer {
     padding: 3rem 0 4rem;
@@ -356,6 +357,19 @@
 
       <article class="project">
         <div class="figure-wrap">
+          <div class="figure">15/20</div>
+          <div class="figure-label">GAIA Level&nbsp;1 questions answered correctly under exact-match grading (pass mark 6/20)</div>
+        </div>
+        <div>
+          <h3><a href="https://github.com/AymenFeki/gaia-agent">A tool-using agent for the GAIA benchmark</a></h3>
+          <p>Final project of the Hugging Face Agents Course. A code-writing agent searches the web, pages through Wikipedia articles and reads attached Excel and Python files to answer real-world questions. Gets there with a small free model by fixing the tools rather than the model: a custom page reader that Wikipedia does not block, search retries, structured outputs and strict answer-format rules, run through a resumable evaluation pipeline.</p>
+          <p class="meta">Python, smolagents, LiteLLM, Gemini, pandas</p>
+          <p class="meta"><a href="https://github.com/AymenFeki/gaia-agent">github.com/AymenFeki/gaia-agent</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="figure-wrap">
           <div class="figure">&minus;27%</div>
           <div class="figure-label">out-of-sample volatility against an equal-weight portfolio (9.34% vs 12.84%)</div>
         </div>
@@ -428,6 +442,16 @@
       </ul>
     </section>
 
+    <section aria-labelledby="certificates-h">
+      <h2 id="certificates-h">Certificates</h2>
+      <dl class="ledger">
+        <div>
+          <dt>October 2026</dt>
+          <dd><a href="https://huggingface.co/learn/agents-course">Hugging Face Agents Course, Certificate of Excellence</a><span class="sub-muted">Hugging Face. Awarded for passing the final GAIA project with 75%.</span></dd>
+        </div>
+      </dl>
+    </section>
+
     <section aria-labelledby="skills-h">
       <h2 id="skills-h">Skills</h2>
       <dl class="ledger">
@@ -437,7 +461,7 @@
         </div>
         <div>
           <dt>ML and AI</dt>
-          <dd>Gradient boosting, LSTM, CNN and Transformer models, SHAP, retrieval-augmented generation, LangChain, LangGraph, MCP</dd>
+          <dd>Gradient boosting, LSTM, CNN and Transformer models, SHAP, retrieval-augmented generation, LLM agents, LangChain, LangGraph, smolagents, MCP</dd>
         </div>
         <div>
           <dt>Engineering</dt>
