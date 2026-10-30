@@ -284,7 +284,7 @@
 
     <div class="about">
       <h2>About me</h2>
-      <p>I build machine learning and AI projects in Python and R, from deep-learning models that predict when jet engines will fail to a study assistant that answers questions from 7,183 research papers and runs on Azure. I put most of the work into how they are evaluated.</p>
+      <p>I build machine learning and AI projects in Python and R, from deep-learning models that predict when jet engines will fail to a study assistant that answers questions from more than 7,000 research papers and runs on Azure. I put most of the work into how they are evaluated.</p>
       <p class="seeking">Looking for working-student roles and internships in Munich.</p>
 
       <div class="actions">
@@ -335,7 +335,7 @@
           <div class="figure-label">test questions find a relevant paper in the top 5 (25/34 without reranking)</div>
         </div>
         <div>
-          <h3><a href="https://github.com/AymenFeki/paper-tutor">paper-tutor: a study assistant over 7,183 research papers</a></h3>
+          <h3><a href="https://github.com/AymenFeki/paper-tutor">paper-tutor: a study assistant over 7,000+ research papers</a></h3>
           <p>Answers questions only from a curated paper database and cites its sources, or says the database has nothing relevant. Papers come from OpenAlex, pass credibility filters and are stored with embeddings in PostgreSQL. Runs on Azure with a FastAPI backend, a LangGraph tutor, an MCP server and scheduled quiz and refresh jobs. Every step, from vector search and reranking to the LLM call, is traced in LangSmith in development and production, and the retrieval evaluation runs as reproducible LangSmith experiments.</p>
           <p class="meta">Python, LangChain, LangGraph, LangSmith, MCP, PostgreSQL with pgvector, FastAPI, Docker, GitHub Actions, Azure</p>
           <p class="meta"><a href="https://github.com/AymenFeki/paper-tutor">github.com/AymenFeki/paper-tutor</a> · <a href="https://smith.langchain.com/public/aa3364a7-4317-4d2f-8e36-da216e628ed5/d/compare?selectedSessions=c11bfd89-8bcb-4010-8605-708c0a4fc8f5,d8bf79e5-dfd8-4063-aef8-54e26d2595fd">experiment comparison (rerank on vs off)</a></p>
@@ -350,7 +350,7 @@
         <div>
           <h3><a href="https://github.com/AymenFeki/turbofan-rul-prediction">Predicting when jet engines will fail</a></h3>
           <p>Remaining-useful-life prediction on NASA's C-MAPSS turbofan data. Compares gradient boosting with an LSTM, a 1D-CNN and a Transformer on identical data, validates by engine rather than by row so no engine leaks into both sets, and explains predictions with SHAP.</p>
-          <p class="meta">Python, PyTorch, scikit-learn, SHAP, pytest</p>
+          <p class="meta">Python, PyTorch, scikit-learn, SHAP, pytest, GitHub Actions</p>
           <p class="meta"><a href="https://github.com/AymenFeki/turbofan-rul-prediction">github.com/AymenFeki/turbofan-rul-prediction</a></p>
         </div>
       </article>
@@ -376,7 +376,7 @@
         <div>
           <h3><a href="https://github.com/AymenFeki/Robust-covariance-portfolios">Robust covariance estimation for portfolios</a></h3>
           <p>Compares the sample covariance with four regularised estimators, including Ledoit&ndash;Wolf shrinkage, random-matrix eigenvalue clipping and a PCA factor model, on 428 S&amp;P&nbsp;500 stocks. Tested in a walk-forward backtest with transaction costs and on a second dataset spanning the 2008 crisis; bootstrap intervals and a deflated Sharpe ratio show which differences hold up.</p>
-          <p class="meta">Python, NumPy, pandas, Matplotlib, pytest</p>
+          <p class="meta">Python, NumPy, pandas, SciPy, Matplotlib, pytest (81 tests), GitHub Actions</p>
           <p class="meta"><a href="https://github.com/AymenFeki/Robust-covariance-portfolios">github.com/AymenFeki/Robust-covariance-portfolios</a></p>
         </div>
       </article>
@@ -389,7 +389,7 @@
         <div>
           <h3><a href="https://github.com/AymenFeki/options-pricing-basics">Option pricing from scratch</a></h3>
           <p>Binomial tree, Black&ndash;Scholes and Monte Carlo written in NumPy without any pricing library, and checked against each other and against no-arbitrage identities. Extended to American early exercise, Asian and barrier options, and a delta-hedging simulation with transaction costs.</p>
-          <p class="meta">Python, NumPy, SciPy, Matplotlib, pytest (69 tests)</p>
+          <p class="meta">Python, NumPy, SciPy, Matplotlib, pytest (69 tests), GitHub Actions</p>
           <p class="meta"><a href="https://github.com/AymenFeki/options-pricing-basics">github.com/AymenFeki/options-pricing-basics</a></p>
         </div>
       </article>
@@ -438,7 +438,7 @@
       <h2 id="more-h">Also on GitHub</h2>
       <ul class="more">
         <li><strong><a href="https://github.com/AymenFeki/stats-concepts-lab">Statistics concepts lab</a></strong>: an R Shiny app that simulates the central limit theorem, Type I error and power, and confidence-interval coverage live.</li>
-        <li><strong><a href="https://github.com/AymenFeki/Social-Inequality">Social inequality</a></strong>: LMU team project of four students, where I was responsible for the content, on trends in income and gender inequality and how they relate to democracy, health and safety. R and Quarto.</li>
+        <li><strong><a href="https://github.com/AymenFeki/Social-Inequality">Social inequality</a></strong>: LMU practical project (October 2025 to March 2026) in a team of four students, where I was responsible for the content, on trends in income and gender inequality and how they relate to democracy, health and safety. R and Quarto.</li>
       </ul>
     </section>
 
@@ -465,19 +465,23 @@
         </div>
         <div>
           <dt>ML and AI</dt>
-          <dd>Gradient boosting, LSTM, CNN and Transformer models, SHAP, retrieval-augmented generation, LLM agents, LangChain, LangGraph, smolagents, MCP, LLM evaluation with LangSmith</dd>
+          <dd>Gradient boosting, LSTM, CNN and Transformer models, SHAP, retrieval-augmented generation, LLM agents, LangChain, LangGraph, smolagents, MCP, LLM evaluation with LangSmith, local models with Ollama, Claude Code</dd>
+        </div>
+        <div>
+          <dt>Statistics</dt>
+          <dd>Regression and LASSO, mixed-effects models, hypothesis tests and power analysis, bootstrap confidence intervals, walk-forward backtesting</dd>
         </div>
         <div>
           <dt>Engineering</dt>
-          <dd>Git, GitHub Actions, Docker, FastAPI, PostgreSQL, Azure, pytest</dd>
+          <dd>Git, GitHub Actions, Docker, FastAPI, PostgreSQL with pgvector, Azure, pytest, n8n</dd>
         </div>
         <div>
           <dt>Analytics</dt>
-          <dd>Power BI (DAX), Excel (pivot tables, XLOOKUP, Power Query)</dd>
+          <dd>Power BI (DAX), Excel (pivot tables, XLOOKUP, SUMIFS, Power Query)</dd>
         </div>
         <div>
           <dt>Languages</dt>
-          <dd>Arabic and French (native), German and English (fluent)</dd>
+          <dd>Arabic and French (native), German (fluent, DSH) and English (fluent)</dd>
         </div>
       </dl>
     </section>
